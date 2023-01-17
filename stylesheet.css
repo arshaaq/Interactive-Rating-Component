@@ -1,0 +1,270 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+	font-family: 'Outfit', sans-serif;
+	--White: rgb(255, 255, 255);
+	--Light-Grey: rgb(149, 158, 172);
+	--Medium-Grey: rgb(124, 135, 152);
+	--Dark-Blue: rgb(37, 45, 55);
+	--Very-Dark-Blue: rgb(29, 32, 37);
+	--Orange: hsl(25, 97%, 53%);
+}
+
+body{
+	background-color: var(--Very-Dark-Blue);
+}
+
+p{
+	font-size: 15px;
+	line-height: 23px;
+	color:grey;
+}
+
+h1{
+	font-size: 28px;
+	color:var(--White);
+	font-weight: 520;
+}
+
+main{
+	background: linear-gradient(180deg, rgb(31, 37, 46) 23%, rgb(15, 16, 19) 100%);
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+	justify-content: space-around;
+	
+	box-sizing: border-box;
+	width: 25em;
+	height: 26em;
+	margin:auto;
+	padding: 1.8em;
+	
+	position: relative;
+	top: 20em;
+
+	border-radius: 40px;
+	/*display: none;*/
+}
+
+.logo{
+	object-fit: contain;
+	width: 18px;
+	height: 18px;
+
+	border-radius: 2rem;
+	padding: 13px;
+	margin-bottom: 20px;
+	background-color: var(--Dark-Blue);
+}
+
+.button-container{
+	display: flex;
+	justify-content:space-between;
+}
+
+.button-container button{
+	border-radius: 100%;
+	border-style: none;
+	width: 3rem;
+	height: 3rem;
+	font-size: 15px;
+	color:var(--Light-Grey);
+	background-color: var(--Dark-Blue);
+}
+
+.button-container button:hover{
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	background-color: var(--Orange);
+	color: var(--White)
+}
+
+.button-container button:focus{
+	background-color: grey;
+	color:var(--White);
+}
+
+
+.submit{
+	min-height: 2.7rem;
+	border-radius: 25px;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 3px;
+	border-style: none;
+
+	background-color: var(--Orange);
+	color: var(--White);
+
+	
+}
+
+.submit:hover{
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	background-color: var(--White);
+	color: var(--Orange);
+
+}
+
+
+
+
+
+.thank-you-container{
+	font-family: 'Outfit', sans-serif;
+	background: linear-gradient(180deg, rgba(37,45,55,1) 23%, rgba(17,19,22,1) 100%);	
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	justify-content: space-around;
+	align-items: center;
+	width: 27em;
+	height: 25em;
+	margin:auto;
+	padding: 1em 1em 3.5em 1em;
+	
+	position: relative;
+	top: 20em;
+
+	border-radius: 40px;
+	display: none;
+}
+
+.mobile-phone{
+	object-fit: contain;
+	width: 11rem;
+	height: 11rem;
+
+	margin-bottom: -40px;
+}
+
+.result-container{
+	color:hsl(25, 97%, 53%);
+	background-color:var(--Dark-Blue);
+	padding: 0.8em 2em 0.8em 2em;
+	border-radius: 30px;
+}
+
+.thank-you-text{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.end-text{
+	max-width: 21rem;
+	text-align: center;
+
+}
+
+
+
+/*---MEDIA QUERY---*/
+@media only screen and (max-width: 375px) {
+
+	main {
+		background: linear-gradient(180deg, rgb(31, 37, 46) 23%, rgb(15, 16, 19) 100%);
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		justify-content: space-around;
+		box-sizing: border-box;
+		width: 20em;
+		height: 25em;
+		margin: auto;
+		top: 20vh;
+		padding: 1.8em;
+		position: relative;
+	
+		border-radius: 40px;
+		
+	}
+
+	.thank-you-container{
+		font-family: 'Outfit', sans-serif;
+		background: linear-gradient(180deg, rgba(37,45,55,1) 23%, rgba(17,19,22,1) 100%);	
+		display: flex;
+		flex-direction: column;
+		row-gap: 2rem;
+		justify-content: space-around;
+		align-items: center;
+		width: 20em;
+		height: 21em;
+		margin:auto;
+		padding: 1em 1em 3.5em 1em;
+		
+		position: relative;
+		top: 125px;
+	
+		border-radius: 40px;
+		display: none;
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
